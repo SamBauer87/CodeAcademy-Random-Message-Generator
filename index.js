@@ -1,33 +1,29 @@
-const messages = (number) => {
-    let message = "";
-    switch (number){
-        case 0:
-            message = "Random message 1.";
-            break;
-        case 1:
-            message = "Random message 2.";
-            break;
-        case 2:
-            message = "Random message 3.";
-            break;
-        case 3:
-            message = "Random message 4.";
-            break;
-        case 4:
-            message = "Random message 5.";
-            break;
-        default:
-            return "Please choose another number.";
-    };
-
-    return message;
+const ranNumGen = () => {
+    return Math.floor(Math.random()*5);
 }
 
-const numGen = () => {
-    let ranNum = Math.floor(Math.random()*5);
-    return ranNum;
+const randomMessageGen = (num) => {
+    let randomMessage = '';
+    if(num === 0){
+        randomMessage = 'Random Message 1';
+    }
+    else if(num === 1){
+        randomMessage = 'Random Message 2';
+    }
+    else if(num === 2){
+        randomMessage = 'Random Message 3';
+    }
+    else if(num === 3){
+        randomMessage = 'Random Message 4';
+    }
+    else if(num === 4){
+        randomMessage = 'Random Message 5';
+    }
+
+    return randomMessage;
 }
 
+console.log(randomMessageGen(ranNumGen));
 
 
 
