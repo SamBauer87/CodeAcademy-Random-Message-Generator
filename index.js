@@ -23,7 +23,11 @@ const randomMessageGen = (num) => {
     return randomMessage;
 }
 
-console.log(randomMessageGen(ranNumGen));
+const displayRanMessage = () => {
+    let ranMessage = randomMessageGen(ranNumGen());
+    document.getElementById('messageDisplay').innerHTML = ranMessage;
+    
+}
 
 
 
